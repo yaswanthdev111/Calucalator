@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #display{
+        background-color: #9a6262;
+        border-radius: 20px;}
+        
+</style>
+</head>
+<body>
+    
+    <input type="text" id="display"><br><br>
+    <button onclick="addValue('1')">1</button>
+    <button onclick="addValue('2')">2</button>
+    <button onclick="addValue('3')">3</button>
+    <button onclick="addValue('4')">4</button>
+    <button onclick="addValue('5')">5</button><br><br>
+    <button onclick="addValue('6')">6</button>
+    <button onclick="addValue('7')">7</button>
+    <button onclick="addValue('8')">8</button>
+    <button onclick="addValue('9')">9</button>
+    <button onclick="addValue('+')">+</button><br><br>
+    <button onclick="addValue('-')">-</button>
+    <button onclick="addValue('*')">*</button>
+    <button onclick="addValue('%')">%</button>
+    <button onclick="addValue('=')">=</button>
+    <button onclick="addValue('DELETE')">DELETE</button>
+    <button onclick="addValue('AC')">AC</button>
+
+    <button onClick="result()">res</button>
+
+    <p id="p1"></p>
+    <script>
+        let p=document.getElementById("p1")
+        let exp=document.getElementById("display")
+
+        function addValue(x){
+
+            exp.value+=x;
+        }
+        function result(){
+            let cal=eval(exp.value)
+            p.innerHTML=cal
+        }
+
+        
+    </script>
+
+    
+    
+
+</body>
+
+</html>
